@@ -90,9 +90,9 @@ import { Vector as VectorLayer } from 'https://cdn.skypack.dev/ol/layer.js';
 import GeoJSON from 'https://cdn.skypack.dev/ol/format/GeoJSON.js';
 
 // Definisikan URL GeoJSON untuk masing-masing jenis fitur
-const polygonGeoJSONUrl = 'https://raw.githubusercontent.com/FarhanRizkiM/gis-openlayers/main/polygon.json';
-const lineStringGeoJSONUrl = 'https://raw.githubusercontent.com/harisriyoni/gis/main/linestring.geojson';
-const pointGeoJSONUrl = 'https://raw.githubusercontent.com/harisriyoni/gis/main/drawpoint.geojson';
+const polygonGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonPolygon.json';
+const lineStringGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonLinestring.json';
+const pointGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsondrawpoint.json';
 
 // Buat sumber vektor dan lapisan vektor untuk masing-masing jenis fitur
 const polygonSource = new VectorSource({
