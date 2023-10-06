@@ -11,7 +11,7 @@ const attributions = '';
 
 const place = [107.90490500781718, -7.215896821868576];
 
-export let idmarker = {id:1};
+export let idmarker = {id: 1};
 
 const basemap = new TileLayer({
     source: new OSM({attributions: attributions,}),
@@ -19,29 +19,29 @@ const basemap = new TileLayer({
 
 const defaultstartmap = new View({
     center: fromLonLat(place),
-    zoom: 14,
+    zoom: 15.5,
 });
 
 export const overlay = new Overlay({
     element: container('popup'),
     autoPan: {
-        animation: {
+    animation: {
         duration: 250,
-        },
     },
-    });
+    },
+});
 
 export const popupinfo = new Overlay({
     element: container('popupinfo'),
     autoPan: {
-        animation: {
+    animation: {
         duration: 250,
-        },
+    },
     },
 });
 
 export let map = new Map({
-    overlays: [overlay,popupinfo],
+    overlays: [overlay, popupinfo],
     target: 'map',
     layers: [
     basemap

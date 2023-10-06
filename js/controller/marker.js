@@ -16,14 +16,14 @@ export function insertMarker(name,long,lat,volume){
     });
     marker.setStyle(
         new Style({
-          image: new Icon({
+            image: new Icon({
             anchor: [0.5, 46],
             anchorXUnits: 'fraction',
             anchorYUnits: 'pixels',
             src: 'img/icon.png',
-          }),
+            }),
         })
-      );
+        );
     let vectorSource = new VectorSource({
         features: [marker],
     });

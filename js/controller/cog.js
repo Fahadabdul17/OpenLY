@@ -11,9 +11,9 @@ export function getAllCoordinates(){
     let Xcog=0;
     let Ycog=0;
     map.getLayers().forEach(layer => {
-        if (i !== 0 && sudahhapus === 0) {
+      if (i !== 0 && sudahhapus === 0) {
         layer.getSource().getFeatures().forEach( feature =>
-            {
+          {
             let node = {
                 id : feature.get('id'),
                 name : feature.get('name'),
@@ -24,10 +24,10 @@ export function getAllCoordinates(){
             totaldemand=totaldemand+Number(feature.get('volume'));
             Xcog=Xcog+feature.get('geometry').flatCoordinates[0]*Number(feature.get('volume'));
             Ycog=Ycog+feature.get('geometry').flatCoordinates[1]*Number(feature.get('volume'));
-            }
+          }
         );
-        }
-        i++;
+      }
+      i++;
     });
     console.log(pointlist);
     let x=Xcog/totaldemand;
