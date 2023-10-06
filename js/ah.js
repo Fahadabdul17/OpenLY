@@ -6,7 +6,7 @@ import {getAllCoordinates} from './controller/cog.js';
 document.addEventListener("DOMContentLoaded", () => {
     const PointTable = document.getElementById("pointTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsondrawpoint.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
+    fetch("waypoint.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             let rowNum = 1; // Nomor urut awal
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const PointTable = document.getElementById("polygonTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonPolygon.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
+    fetch("polygon.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             let rowNum = 1; // Nomor urut awal
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const PointTable = document.getElementById("polylineTable").getElementsByTagName('tbody')[0];
 
-    fetch("https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonLinestring.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
+    fetch("polyline.json") // Ganti "geojsondrawpoint.json" dengan nama file JSON Anda
         .then(response => response.json())
         .then(data => {
             let rowNum = 1; // Nomor urut awal
@@ -90,9 +90,9 @@ import { Vector as VectorLayer } from 'https://cdn.skypack.dev/ol/layer.js';
 import GeoJSON from 'https://cdn.skypack.dev/ol/format/GeoJSON.js';
 
 // Definisikan URL GeoJSON untuk masing-masing jenis fitur
-const polygonGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonPolygon.json';
-const lineStringGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsonLinestring.json';
-const pointGeoJSONUrl = 'https://raw.githubusercontent.com/Fahadabdul17/OpenLY/main/geojsondrawpoint.json';
+const polygonGeoJSONUrl = 'polygon.json';
+const lineStringGeoJSONUrl = 'polyline.json';
+const pointGeoJSONUrl = 'waypoint.json';
 
 // Buat sumber vektor dan lapisan vektor untuk masing-masing jenis fitur
 const polygonSource = new VectorSource({
