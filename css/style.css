@@ -1,30 +1,26 @@
 @import "https://cdn.skypack.dev/ol/ol.css";
 
+/* Reset CSS */
 html,
 body {
   margin: 0;
+  padding: 0;
   height: 100%;
 }
 
+/* Styles for the map container */
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 20px;
+  position: relative;
+}
 
-    #map {
-        width: 100%; 
-        height: 400px; 
-        margin: 0 auto; 
-    }
-
-    .intro {
-      background-color: #f2f2f2;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      text-align: center;
-    }
-    
+/* Popup Styles */
 .ol-popup {
   position: absolute;
   background-color: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 10px;
   font: 0.9em sans-serif;
@@ -33,7 +29,9 @@ body {
   left: -50px;
   min-width: 280px;
 }
-.ol-popup:after, .ol-popup:before {
+
+.ol-popup:after,
+.ol-popup:before {
   top: 100%;
   border: solid transparent;
   content: " ";
@@ -42,35 +40,43 @@ body {
   position: absolute;
   pointer-events: none;
 }
+
 .ol-popup:after {
   border-top-color: white;
   border-width: 10px;
   left: 48px;
   margin-left: -10px;
 }
+
 .ol-popup:before {
   border-top-color: #cccccc;
   border-width: 11px;
   left: 48px;
   margin-left: -11px;
 }
+
 .ol-popup-closer {
   text-decoration: none;
   position: absolute;
   top: 2px;
   right: 8px;
 }
+
 .ol-popup-closer:after {
   content: "✖";
 }
 
+/* Styles for the info table */
 #info-table {
   max-width: 1600px;
   width: 100%;
+  margin-top: 20px;
 }
 
 #info-table h2 {
   text-align: center;
+  font-size: 18px;
+  color: #333;
 }
 
 #info-table table {
@@ -79,18 +85,16 @@ body {
   border: 1px solid #ccc;
 }
 
-#info-table th, #info-table td {
+#info-table th,
+#info-table td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
+  font-size: 14px;
 }
 
 #info-table th {
   background-color: #f2f2f2;
-}
-
-#info-table td {
-  font-size: 14px;
 }
 
 #info-table tr:nth-child(even) {
@@ -101,57 +105,58 @@ body {
   background-color: #e6e6e6;
 }
 
-/* Gaya untuk judul utama */
+/* Styles for headings and student info */
 h1 {
-    font-size: 36px;
-    color: #333;
+  font-size: 36px;
+  color: #333;
+  text-align: center;
 }
 
-/* Gaya untuk info siswa */
 .intro {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: left;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
 }
 
-/* Gaya untuk nama dan kelas */
 .intro h2 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #555;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555;
 }
 
-/* Gaya untuk tabel */
+
+/* General table styles */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-top: 20px;
 }
 
-/* Gaya untuk header kolom */
+/* Header column styles */
 th {
-    background-color: #4CAF50;
-    color: white;
-    text-align: left;
-    padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+  padding: 10px;
 }
 
-/* Gaya untuk sel data */
+/* Data cell styles */
 td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
-/* Gaya untuk baris ganjil */
+/* Odd rows styles */
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-/* Gaya untuk baris saat dihover */
+/* Hovered row styles */
 tr:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
+
